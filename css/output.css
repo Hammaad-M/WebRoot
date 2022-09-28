@@ -461,8 +461,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
+body {
+  font-family: sans-serif;
+}
+
 .background {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/compressed-bg.jpg");
 }
 
 .glass {
@@ -561,9 +565,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .py-3 {
@@ -579,11 +583,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .text-center {
@@ -636,10 +635,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: flex;
   }
 
-  .md\:h-auto {
-    height: auto;
-  }
-
   .md\:h-max {
     height: -webkit-max-content;
     height: -moz-max-content;
@@ -652,14 +647,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     height: min-content;
   }
 
-  .md\:w-28 {
-    width: 7rem;
-  }
-
   .md\:w-max {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:w-min {
@@ -668,20 +663,8 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: min-content;
   }
 
-  .md\:w-9\/12 {
-    width: 75%;
-  }
-
-  .md\:w-10\/12 {
-    width: 83.333333%;
-  }
-
-  .md\:w-11\/12 {
-    width: 91.666667%;
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
+  .md\:w-28 {
+    width: 7rem;
   }
 
   .md\:flex-col {
@@ -692,14 +675,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     align-items: center;
   }
 
-  .md\:justify-center {
-    justify-content: center;
-  }
-
-  .md\:gap-3 {
-    gap: 0.75rem;
-  }
-
   .md\:gap-1 {
     gap: 0.25rem;
   }
@@ -708,24 +683,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding: 1.5rem;
   }
 
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
-  }
-
-  .md\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 
   .md\:text-left {
@@ -748,16 +713,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-32 {
-    width: 8rem;
+  .lg\:w-9\/12 {
+    width: 75%;
   }
 
   .lg\:w-36 {
     width: 9rem;
-  }
-
-  .lg\:w-9\/12 {
-    width: 75%;
   }
 
   .lg\:p-8 {
