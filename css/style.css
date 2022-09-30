@@ -1,17 +1,16 @@
 @tailwind base;
 @tailwind components;
 
-body {
-  font-family: sans-serif;
-}
-html {
-  scroll-behavior: smooth;
-}
-.background {
-  background-image: url("../img/compressed-bg.jpg");
-}
-
 @layer base {
+  body {
+    font-family: sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .background {
+    background-image: url("../img/compressed-bg.jpg");
+  }
   .glass {
     backdrop-filter: blur(10px) saturate(183%);
     -webkit-backdrop-filter: blur(10px) saturate(183%);
