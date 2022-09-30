@@ -9,18 +9,45 @@ body {
   background-image: url("../img/compressed-bg.jpg");
 }
 
-.glass {
-  backdrop-filter: blur(10px) saturate(183%);
-  -webkit-backdrop-filter: blur(10px) saturate(183%);
-  background-color: rgba(219, 219, 233, 0.56);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+@layer base {
+  .glass {
+    backdrop-filter: blur(10px) saturate(183%);
+    -webkit-backdrop-filter: blur(10px) saturate(183%);
+    background-color: rgba(219, 219, 233, 0.56);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+  .fogged-glass {
+    backdrop-filter: blur(14px) saturate(200%);
+    -webkit-backdrop-filter: blur(14px) saturate(200%);
+    background-color: rgba(219, 219, 233, 0.65);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+  .background {
+    @apply bg-cover w-full min-h-screen p-0 fixed top-0 left-0;
+  }
+  .links-container > a {
+    @apply w-max text-left text-purple-800 hover:text-orange-400 underline;
+  }
+  .rating {
+    @apply text-blue-800;
+  }
+  .title {
+    @apply font-bold text-blue-700 underline;
+  }
+  .desc {
+    @apply font-light;
+  }
+  .list-wrapper {
+    @apply mt-4 flex flex-col gap-2 md:grid md:grid-cols-2;
+  }
+  .list-wrapper li {
+    @apply h-auto fogged-glass px-3 py-4 md:p-6 md:text-left md:text-lg lg:p-8 rounded-md;
+  }
+  body {
+    @apply my-4 sm:my-6 md:my-8 lg:my-10;
+  }
 }
-.fogged-glass {
-  backdrop-filter: blur(14px) saturate(200%);
-  -webkit-backdrop-filter: blur(14px) saturate(200%);
-  background-color: rgba(219, 219, 233, 0.65);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-}
+
 @tailwind utilities;
